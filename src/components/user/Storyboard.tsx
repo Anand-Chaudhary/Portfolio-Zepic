@@ -12,24 +12,25 @@ export function Storyboard() {
     {
       title: "CINEMATIC INTRO",
       goal: "Create powerful opening sequence",
-      tool: "After Effects + Cinema 4D",
-      skills: ["Motion Graphics", "3D Animation", "Compositing"],
-      imageUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=300&fit=crop",
-      accentColor: 'red' as const,
-      category: 'motion',
-      description: "A high-energy cinematic intro sequence designed to captivate audiences from the first frame. This project showcased advanced 3D modeling and particle effects to create a memorable brand introduction.",
-      duration: "15 seconds",
-      challenges: [
-        "Complex 3D camera movements",
-        "Particle system optimization",
-        "Seamless logo integration"
-      ],
-      results: [
-        "40% increase in viewer retention",
-        "Featured in industry showcase",
-        "Client brand recognition up 60%"
-      ]
-    },
+  tool: "After Effects + Cinema 4D",
+  skills: ["Motion Graphics", "3D Animation", "Compositing"],
+  mediaUrl: "/Whiplash.mp4", // stored in public
+  mediaType: "video",
+  accentColor: 'red' as const,
+  category: 'motion',
+  description: "A high-energy cinematic intro sequence designed to captivate audiences from the first frame...",
+  duration: "15 seconds",
+  challenges: [
+    "Complex 3D camera movements",
+    "Particle system optimization",
+    "Seamless logo integration"
+  ],
+  results: [
+    "40% increase in viewer retention",
+    "Featured in industry showcase",
+    "Client brand recognition up 60%"
+  ]
+},
     {
       title: "MONTAGE EDITS",
       goal: "Showcase seamless transitions",
@@ -286,7 +287,7 @@ export function Storyboard() {
                 goal={frame.goal}
                 tool={frame.tool}
                 skills={frame.skills}
-                imageUrl={frame.imageUrl}
+                imageUrl={frame.imageUrl || '/default-image.jpg'}
                 accentColor={frame.accentColor}
                 onClick={() => handleFrameClick(frame)}
               />

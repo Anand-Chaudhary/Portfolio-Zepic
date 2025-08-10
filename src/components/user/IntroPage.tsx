@@ -24,10 +24,11 @@ export function IntroPage() {
 
   const featuredProjects = [
     {
-      title: "Tech Startup Launch",
-      category: "Commercial",
-      imageUrl: "C:\Users\ASUS\Downloads\WhatsApp Image 2025-07-12 at 5.06.08 PM.jpeg",
-      stats: { views: '2.5M', likes: '45K', duration: '2:30' }
+        title: "Tech Startup Launch",
+        category: "Commercial",
+        mediaUrl: "/Whiplash.mp4", // can be video or image
+        mediaType: "video", // "video" or "image"
+        stats: { views: '2.5M', likes: '45K', duration: '2:30' }
     },
     {
       title: "Music Video Edit",
