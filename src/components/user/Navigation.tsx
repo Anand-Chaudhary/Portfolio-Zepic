@@ -39,7 +39,7 @@ export function Navigation({ activeSection }: NavigationProps) {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <div className="w-8 h-8 dark-button rounded-lg dark-glow"></div>
-            <span className="text-xl font-black dark-text-primary tracking-wider">NEXTGEN</span>
+            <span className="text-xl font-black dark-text-primary tracking-wider">DHRUV</span>
           </motion.div>
 
           {/* Navigation Links */}
