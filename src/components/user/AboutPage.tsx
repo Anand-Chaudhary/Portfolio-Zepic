@@ -48,20 +48,17 @@ export function AboutPage() {
   const testimonials = [
     {
       quote: "Outstanding work! The final video exceeded our expectations and really captured our brand vision.",
-      author: "Sarah Chen",
-      company: "TechFlow Inc.",
+      author: "avantika rathore",  
       rating: 5
     },
     {
       quote: "Professional, timely, and creative. NextGen delivered exactly what we needed for our campaign.",
-      author: "Marcus Rodriguez", 
-      company: "Brand Dynamics",
+      author: "ashmit chaukhani", 
       rating: 5
     },
     {
       quote: "The color grading work was phenomenal. Really transformed our raw footage into something cinematic.",
-      author: "Lisa Park",
-      company: "Documentary Films",
+      author: "ritesh jadav",
       rating: 5
     }
   ];

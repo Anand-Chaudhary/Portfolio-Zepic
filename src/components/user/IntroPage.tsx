@@ -172,21 +172,41 @@ export function IntroPage() {
                     onClick={() => handleSkillClick(skill.name)}
                     className="cursor-pointer"
                   >
-                    <div className="liquid-card rounded-lg p-3 border border-liquid-gray-200 hover:border-liquid-red/30 transition-all hover:liquid-glow">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-liquid-gray-900 text-sm font-medium">{skill.name}</span>
-                        <span className="text-liquid-red text-xs font-medium">{skill.level}%</span>
-                      </div>
-                      <div className="h-2 bg-liquid-gray-200 rounded-full overflow-hidden">
-                        <motion.div
-                          className="h-full liquid-progress rounded-full"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ delay: 0.8 + index * 0.1, duration: 1, ease: "easeOut" }}
-                          viewport={{ once: true }}
-                        />
-                      </div>
-                    </div>
+                   <div className="rounded-lg p-3 bg-black/40 backdrop-blur-md shadow-lg hover:bg-black/70 transition-all">
+                   <div className="rounded-lg p-3 bg-black/50 backdrop-blur-md shadow-lg hover:bg-grey/30 transition-all">
+  <div className="flex justify-between items-center mb-2">
+    <span className="text-liquid-gray-900 text-sm font-medium">{skill.name}</span>
+    <span className="text-liquid-red text-xs font-medium">{skill.level}%</span>
+  </div>
+  <div className="h-2 bg-liquid-gray-200/60 rounded-full overflow-hidden backdrop-blur-sm">
+    <motion.div
+      className="h-full rounded-full bg-gradient-to-r from-red-600 via-red-500 to-red-400 shadow-[0_0_8px_rgba(255,0,0,0.5)] shimmer"
+      initial={{ width: 0 }}
+      whileInView={{ width: `${skill.level}%` }}
+      transition={{ delay: 0.8 + index * 0.1, duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
+    />
+  </div>
+</div>
+</div>
+
+<style jsx>{`
+  .shimmer {
+    background-size: 200% 100%;
+    animation: shimmerMove 2s infinite linear;
+  }
+
+  @keyframes shimmerMove {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+`}</style>
+
+
                   </motion.div>
                 ))}
               </div>
@@ -206,12 +226,13 @@ export function IntroPage() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
-                alt="Video Editor"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-liquid-white/20 via-transparent to-transparent"></div>
+             <ImageWithFallback
+  src="/photo_6109299221887831544_y.jpg"
+  alt="Profile picture"
+  className="w-full h-full object-cover"
+ />
+<div className="absolute inset-0 bg-gradient-to-t from-red-900/40 via-transparent to-transparent"></div>
+
               
               {/* Interactive overlay */}
               <motion.div
