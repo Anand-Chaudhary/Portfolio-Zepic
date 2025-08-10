@@ -9,21 +9,17 @@ export function IntroPage() {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
   const highlights = [
-    { number: '5+', label: 'Years Experience', icon: '⭐' },
-    { number: '200+', label: 'Projects Completed', icon: '🎬' },
-    { number: '50+', label: 'Happy Clients', icon: '😊' },
-    { number: '24/7', label: 'Support Available', icon: '🚀' },
+    { number: '3+', label: 'Years Experience', icon: '⭐' },
+    { number: '100+', label: 'Projects Completed', icon: '🎬' },
+    { number: '30+', label: 'Happy Clients', icon: '😊' },
+    { number: '9am to 11pm', label: 'Support Available', icon: '🚀' },
   ];
 
   const skills = [
-    { name: 'After Effects', level: 95 },
-    { name: 'Premiere Pro', level: 90 },
-    { name: 'DaVinci Resolve', level: 85 },
-    { name: 'Cinema 4D', level: 80 },
-    { name: 'Motion Graphics', level: 95 },
-    { name: 'Color Grading', level: 88 },
-    { name: 'VFX Compositing', level: 82 },
-    { name: 'Audio Sync', level: 87 }
+    { name: 'After Effects', level: 80 },
+    { name: 'Premiere Pro', level: 95 },
+    { name: 'Color Grading', level: 88 },    
+    { name: 'Audio Sync', level: 90 }
   ];
 
   const featuredProjects = [
@@ -114,8 +110,8 @@ export function IntroPage() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Transforming raw footage into compelling visual narratives. 
-                Specializing in cinematic storytelling, motion graphics, and post-production excellence.
+                Helping creators and brands elevate their videos with standout edits. 
+                Making every story captivating and engaging following latest trends.
               </motion.p>
             </div>
 

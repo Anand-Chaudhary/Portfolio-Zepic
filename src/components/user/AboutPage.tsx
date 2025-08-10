@@ -8,41 +8,40 @@ export function AboutPage() {
     {
       title: "Video Editing",
       description: "Professional cutting, pacing, and storytelling for all formats",
-      price: "From 500rs-5k rs",
-      features: ["Timeline editing", "Audio sync", "Pacing optimization", "Format delivery"]
+      price: "From ₹500-₹5000",
+      features: ["Timeline editing", "Audio sync", "flow optimization", "podcast editing"]
     },
     {
-      title: "Motion Graphics",
-      description: "Dynamic animations, titles, and visual effects integration",
-      price: "From $75/hour", 
-      features: ["2D/3D animation", "Logo reveals", "Kinetic typography", "VFX compositing"]
+      title: "Contract Basis",
+      description: "Monthly contract basis projects . Contact for further details.",
+      price: " Depends on project ",
+      features: ["reel edits", "youtube edits", "podcast editing", "editing + management"]
     },
     {
-      title: "Color Grading",
-      description: "Cinematic color correction and mood enhancement",
-      price: "From $60/hour",
-      features: ["Color correction", "LUT application", "Mood styling", "Consistency matching"]
+      title: "Page Management",
+      description: " Will manage and boost your instagram . Contact for further details.",
+      price: "According to contract",
+      features: ["edit your post", "latest trends", "boost engagement", "gain followers"]
     }
   ];
-
   const experience = [
     {
-      year: "2020-2025",
-      title: "Senior Video Editor",
-      company: "NextGen Studios",
-      description: "Led post-production for major commercial campaigns and documentaries"
+      year: "2021-2023",
+      title: "Video Editor",
+      Learned : "Basics of video editing and mastered advanced techniques.",
+      description: "Worked on a variety of projects, honing skills in storytelling and visual aesthetics."
     },
     {
-      year: "2018-2020", 
-      title: "Motion Graphics Artist",
-      company: "Creative Collective",
-      description: "Specialized in animated content for tech startups and music videos"
+      year: "2023-2025", 
+      title: "video editor + social media manager",
+      Learned: "hands on experience with instagram and youtube algorithms",
+      description: "Runed many pages and boosted their engagement by trying different strategies."
     },
     {
-      year: "2016-2018",
-      title: "Junior Editor",
-      company: "Media Productions",
-      description: "Learned the fundamentals of storytelling and technical excellence"
+      year: "2025",
+      title: "Editor + Social Media Manager + AI Specialist",
+      learned: "Editing techniques with latest AI trends.",
+      description: "Focused on integrating AI tools into the editing workflow for enhanced efficiency."
     }
   ];
 
@@ -95,7 +94,7 @@ export function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            ABOUT NEXTGEN
+            ABOUT ME
           </motion.h1>
           <motion.p 
             className="text-xl text-liquid-gray-600 max-w-3xl mx-auto leading-relaxed"
@@ -105,7 +104,7 @@ export function AboutPage() {
             viewport={{ once: true }}
           >
             Passionate about transforming raw footage into compelling visual narratives. 
-            With 5+ years of experience, I specialize in creating content that not only looks stunning 
+            With 3+ years of experience, I specialize in creating content that not only looks stunning 
             but tells powerful stories that resonate with audiences.
           </motion.p>
         </motion.div>
@@ -205,7 +204,7 @@ export function AboutPage() {
                       {exp.year}
                     </Badge>
                     <h3 className="text-liquid-gray-900 font-medium">{exp.title}</h3>
-                    <span className="text-liquid-red text-sm">@ {exp.company}</span>
+                    <span className="text-liquid-red text-sm">@ {exp.Learned}</span>
                   </div>
                   <p className="text-liquid-gray-600 text-sm">{exp.description}</p>
                 </div>

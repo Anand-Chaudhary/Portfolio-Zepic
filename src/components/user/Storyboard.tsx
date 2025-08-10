@@ -326,16 +326,16 @@ export function Storyboard() {
       >
         <div className="border-t dark-border pt-8">
           <p className="dark-text-secondary text-sm">
-            © 2025 NEXTGEN • Professional Video Editing Services
+            © 2025 DHRUV • Professional Video Editor
           </p>
           <div className="flex justify-center gap-8 mt-4 text-sm dark-text-secondary">
-            <span>Motion Graphics</span>
+            <span>Video Editing</span>
             <span>•</span>
             <span>Color Grading</span>
             <span>•</span>
-            <span>Post Production</span>
+            <span>Podcast Editing</span>
             <span>•</span>
-            <span>Visual Effects</span>
+            <span>Page Management</span>
           </div>
         </div>
       </motion.div>

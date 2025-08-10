@@ -122,60 +122,61 @@ export function ContactPage() {
   const contactInfo = [
     {
       title: "Email",
-      value: "hello@nextgen.video",
+      value: "Zepicnewera@gmail.com",
       icon: "📧"
     },
     {
-      title: "Response Time", 
-      value: "Within 24 hours",
+      title: "Response Time  /  availability", 
+      value: "Within 12 hours  /  Mon-sun, 9AM-9PM ",
       icon: "⚡"
     },
     {
-      title: "Availability",
-      value: "Mon-Fri, 9AM-6PM EST",
-      icon: "🕐"
+      title: "Contact number",
+      value: "7870814247",
+      icon: "📞"
     }
   ];
 
   const packages = [
     {
-      name: "BASIC EDIT",
-      price: "$200-500",
+      name: "BASIC EDIT / short form",
+      price: "₹300-₹1000",
       description: "Perfect for social media and simple projects",
       features: [
-        "Up to 5 minutes final video",
-        "Basic cutting & transitions",
-        "Audio sync & cleanup", 
+        "30sec to 1min long ",
+        "Basic cutting & transitions and effects",
+        "Audio sync & cleanup",
         "1-2 revisions included",
         "48-72 hour delivery"
       ],
       popular: false
     },
     {
-      name: "PROFESSIONAL",
-      price: "$500-1200",
+      name: "PROFESSIONAL / long form",
+      price: "₹700-₹4000",
       description: "Commercial quality with motion graphics",
       features: [
-        "Up to 15 minutes final video",
+        "Up to 15-20 minutes long",
         "Advanced transitions & effects",
         "Motion graphics & titles",
         "Color grading included",
-        "3-5 revisions included", 
-        "24-48 hour delivery"
+        "3-5 revisions included",
+        "Smooth storytelling ",
+        "48-72 hour delivery"
       ],
       popular: true
     },
     {
-      name: "CINEMATIC",
-      price: "$1200+",
-      description: "Premium storytelling with full post-production",
+      name: "PODCAST",
+      price: "₹2000+",
+      description: "Premium storytelling with complete smooth flow",
       features: [
         "Unlimited length video",
-        "Advanced VFX & compositing",
+        "with eye pleasing visuals",
         "Custom motion graphics",
         "Professional color grading",
-        "Unlimited revisions",
-        "Priority 24hr delivery"
+        "Seamless audio integration",
+        "Priority 48-72 hour delivery"
       ],
       popular: false
     }
@@ -284,11 +285,11 @@ export function ContactPage() {
                   },
                   {
                     q: "How do revisions work?",
-                    a: "Each package includes revisions. Additional changes at $50/hour."
+                    a: "Each package includes revisions. Additional changes will be charged accordingly."
                   },
                   {
                     q: "Do you work with raw footage?",
-                    a: "Yes! Send via WeTransfer, Google Drive, or Dropbox."
+                    a: "Yes! Send via telegram, Google Drive, or whatsapp documents."
                   }
                 ].map((faq, index) => (
                   <motion.div 
