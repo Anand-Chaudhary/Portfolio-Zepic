@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import photo from '../../../public/124665670_820739168751331_1895423176256337705_n.png'
+import photo from '../../../public/photo_6109299221887831544_y.jpg'
 const ERROR_IMG_SRC =
   'C:\Users\ASUS\Downloads\WhatsApp Image 2025-07-12 at 5.06.08 PM.jpeg'
 

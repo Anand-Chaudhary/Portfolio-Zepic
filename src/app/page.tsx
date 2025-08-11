@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Navigation } from '@/components/user/Navigation';
 import { IntroPage } from '@/components/user/IntroPage';
-import { Storyboard } from '@/components/user/Storyboard';
+import { VideoPortfolio } from '@/components/user/VideoPortfolio';
 import { AboutPage } from '@/components/user/AboutPage';
 import { ContactPage } from '@/components/user/ContactPage';
 
@@ -35,7 +35,7 @@ export default function App() {
       <Navigation activeSection={activeSection} />
       <main>
         <IntroPage />
-        <Storyboard />
+        <VideoPortfolio />
         <AboutPage />
         <ContactPage />
       </main>
