@@ -95,8 +95,8 @@ export function IntroPage() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                Transforming raw footage into compelling visual narratives. 
-                Specializing in cinematic storytelling, motion graphics, and post-production excellence.
+                Helping creators and brands elevate their videos with standout edits.
+                Making every story captivating and engaging by following the latest trends and techniques.
               </motion.p>
             </div>
 
