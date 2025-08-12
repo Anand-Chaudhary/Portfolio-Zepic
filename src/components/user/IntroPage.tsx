@@ -97,7 +97,7 @@ export function IntroPage() {
               >
                 Helping creators and brands elevate their videos with standout edits.
                 Making every story captivating and engaging by following the latest trends and techniques.
-              </motion.p>
+              </motion.p>git 
             </div>
 
             {/* CTA Buttons */}
