@@ -4,45 +4,51 @@ import { Play, Pause, Volume2, VolumeX, Menu, X } from 'lucide-react';
 const sampleVideos = [
   {
     id: 1,
-    category: "Sample 01",
+    title: "Sample 01",
     duration: "2:30",
     src: "/maria.mp4",
-    poster: "/maria.mp4"
+    poster: "/maria.mp4",
+    description: "This is something i have worked on"
   },
   {
     id: 2,
-    category: "Sample 02",
+    title: "Sample 02",
     duration: "3:45",
     src: "/7ma2h2_1 (1).mp4",
-    poster: "/7ma2h2_1 (1).mp4"
+    poster: "/7ma2h2_1 (1).mp4",
+    description: "This is something i have worked on"
   },
   {
     id: 3,
-    category: "Sample 03",
+    title: "Sample 03",
     duration: "5:20",
     src: "/how_it_goes_edit.mp4",
-    poster: "/how_it_goes_edit.mp4"
+    poster: "/how_it_goes_edit.mp4",
+    description: "This is something i have worked on"
   },
   {
     id: 4,
-    category: "Sample 04",
+    title: "Sample 04",
     duration: "1:55",
     src: "/warm.mp4",
-    poster: "/warm.mp4"
+    poster: "/warm.mp4",
+    description: "This is something i have worked on"
   },
   {
     id: 5,
-    category: "sample 5",
+    title: "sample 5",
     duration: "8:15",
     src: "/headlock_2.mp4",
-    poster: "/headlock_2.mp4"
+    poster: "/headlock_2.mp4",
+    description: "This is something i have worked on"
   },
   {
     id: 6,
-    category: "Sample 06",
+    title: "Sample 06",
     duration: "4:10",
     src: "/VID_20250720_183053_309.mp4",
-    poster: "/VID_20250720_183053_309.mp4"
+    poster: "/VID_20250720_183053_309.mp4",
+    description: "This is something i have worked on"
   }
 ];
 
@@ -202,6 +208,7 @@ function VideoCard({ video, isActive, scrollProgress, index, totalVideos }: Vide
           ref={videoRef}
           className="w-full h-full transition-all duration-300"
           style={{ 
+            //eslint-disable-next-line
             objectFit: objectFit as any,
             objectPosition: 'center'
           }}
@@ -235,9 +242,6 @@ function VideoCard({ video, isActive, scrollProgress, index, totalVideos }: Vide
           <div className="absolute top-6 left-6 right-6">
             <div className="flex justify-between items-start">
               <div>
-                <span className="inline-block px-3 py-1 bg-accent-red/20 text-accent-red text-sm rounded-full border border-accent-red/30 mb-3">
-                  {video.category}
-                </span>
                 <h3 className="text-xl md:text-2xl font-bold text-dark-gray-100 mb-2">
                   {video.title}
                 </h3>
@@ -321,7 +325,7 @@ function VideoCard({ video, isActive, scrollProgress, index, totalVideos }: Vide
               </div>
 
               <div className="text-sm text-dark-gray-400">
-                {video.category} • {video.duration}
+                {video.title} • {video.duration}
               </div>
             </div>
           </div>
@@ -519,72 +523,6 @@ export function VideoPortfolio() {
           <div className="flex flex-col items-center gap-2 text-dark-gray-500 scroll-hint">
             <div className="text-sm">Scroll</div>
             <div className="w-px h-8 bg-gradient-to-b from-accent-red to-transparent" />
-          </div>
-        </div>
-      </div>
-
-      {/* Responsive Video Sidebar */}
-      <div 
-        id="video-sidebar"
-        className={`fixed left-0 top-0 h-full z-25 transition-all duration-300 ease-out
-                   lg:left-8 lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:h-auto lg:w-auto
-                   ${isSidebarOpen 
-                     ? 'w-80 translate-x-0' 
-                     : 'w-80 -translate-x-full lg:translate-x-0 lg:translate-y-[-50%]'
-                   }`}
-      >
-        {/* Mobile Overlay */}
-        <div className={`lg:hidden absolute inset-0 bg-dark-gray-950/90 backdrop-blur-lg
-                        ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} />
-        
-        {/* Sidebar Content */}
-        <div className="video-sidebar-nav space-y-2 lg:space-y-4 relative z-10 h-full lg:h-auto
-                       pt-20 px-6 lg:pt-0 lg:px-0 overflow-y-auto lg:overflow-visible">
-          
-          {/* Mobile Header */}
-          <div className="lg:hidden mb-8">
-            <h3 className="text-xl font-bold text-dark-gray-100 mb-2">Video Navigation</h3>
-            <p className="text-sm text-dark-gray-400">Tap on any video to jump to it</p>
-          </div>
-
-          {/* Video List */}
-          {sampleVideos.map((video, index) => (
-            <button
-              key={video.id}
-              onClick={() => jumpToVideo(index)}
-              className={`video-sidebar-item w-full text-left transition-all duration-500 cursor-pointer
-                         p-4 lg:p-2 rounded-lg lg:rounded-none hover:bg-dark-gray-800/50 lg:hover:bg-transparent
-                         ${index === activeVideoIndex
-                           ? 'opacity-100 transform translate-x-0 active bg-dark-gray-800/30 lg:bg-transparent' 
-                           : 'opacity-70 transform translate-x-[-10px] hover:opacity-100'
-                         }`}
-            >
-              <div className="text-left lg:text-right">
-                <div className={`text-sm font-medium transition-colors duration-300 mb-1 lg:mb-0
-                               ${index === activeVideoIndex ? 'text-accent-red' : 'text-dark-gray-400'}`}>
-                  {video.category}
-                </div>
-                <div className={`text-base lg:text-lg font-bold transition-colors duration-300
-                               ${index === activeVideoIndex ? 'text-dark-gray-100' : 'text-dark-gray-500'}`}>
-                  {video.title}
-                </div>
-                <div className="lg:hidden text-xs text-dark-gray-500 mt-1">
-                  {video.duration}
-                </div>
-              </div>
-              
-              {/* Active Indicator for Mobile */}
-              {index === activeVideoIndex && (
-                <div className="lg:hidden w-1 h-8 bg-accent-red rounded-full absolute right-4 top-1/2 transform -translate-y-1/2" />
-              )}
-            </button>
-          ))}
-          
-          {/* Mobile Footer */}
-          <div className="lg:hidden pt-8 pb-6">
-            <p className="text-xs text-dark-gray-500 text-center">
-              Swipe up/down or use scroll to navigate videos
-            </p>
           </div>
         </div>
       </div>

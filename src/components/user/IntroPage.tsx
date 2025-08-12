@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ImageWithFallback } from '@/components/figma/ImageWithFallback';
 import TiltedCard from '@/components/user/TiltedCard';
 import { motion } from 'motion/react';
-import { ChevronDown, Play, ExternalLink, Sparkles } from 'lucide-react';
+import { ChevronDown, Play, Sparkles } from 'lucide-react';
 
 export function IntroPage() {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
@@ -21,11 +20,6 @@ export function IntroPage() {
     { name: 'Premiere Pro', level: 90 },
     { name: 'Color Grading', level: 95 },
     { name: 'Audio Sync', level: 90 }
-  ];
-
-  const featuredProjects = [
-
-  
   ]; 
 
   const scrollToSection = (sectionId: string) => {
@@ -143,7 +137,7 @@ export function IntroPage() {
               transition={{ delay: 0.6, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <p className="text-sm dark-text-secondary tracking-wider">// EXPERTISE</p>
+              <p className="text-sm dark-text-secondary tracking-wider">EXPERTISE</p>
               <div className="grid grid-cols-2 gap-3">
                 {skills.map((skill, index) => (
                   <motion.div
@@ -262,66 +256,6 @@ export function IntroPage() {
           >
             A glimpse into my latest projects
           </motion.p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {featuredProjects.map((project, index) => (
-            <motion.div 
-              key={index} 
-              className="group relative dark-card rounded-xl overflow-hidden dark-border hover:border-accent-red/30 transition-all duration-300 dark-glow-card"
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5, scale: 1.02 }}
-            >
-              <div className="aspect-video overflow-hidden relative">
-                <ImageWithFallback
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                
-                {/* Interactive overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm"
-                >
-                  <div className="flex gap-3">
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 dark-glass rounded-full flex items-center justify-center hover:dark-glow transition-colors"
-                    >
-                      <Play className="w-4 h-4 dark-text-accent ml-0.5" fill="currentColor" />
-                    </motion.button>
-                    <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="w-10 h-10 dark-glass rounded-full flex items-center justify-center hover:dark-glow transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4 dark-text-accent" />
-                    </motion.button>
-                  </div>
-                </motion.div>
-
-                {/* Stats overlay */}
-                <div className="absolute bottom-2 left-2 right-2 dark-glass rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex justify-between dark-text-primary text-xs font-medium">
-                    <span>👁️ {project.stats.views}</span>
-                    <span>❤️ {project.stats.likes}</span>
-                    <span>⏱️ {project.stats.duration}</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <Badge className="bg-accent-red/10 dark-text-accent border border-accent-red/30 text-xs mb-2">
-                  {project.category}
-                </Badge>
-                <h3 className="dark-text-primary tracking-wide font-medium">{project.title}</h3>
-              </div>
-            </motion.div>
-          ))}
         </div>
 
         <motion.div 

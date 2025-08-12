@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 
 export function Storyboard() {
+  //eslint-disable-next-line
   const [selectedFrame, setSelectedFrame] = useState<any>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -199,7 +200,7 @@ export function Storyboard() {
       ]
     }
   ];
-
+//eslint-disable-next-line
   const handleFrameClick = (frame: any) => {
     setSelectedFrame(frame);
     setIsModalOpen(true);
@@ -242,7 +243,7 @@ export function Storyboard() {
           transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true }}
         >
-          // INTERACTIVE SHOWREEL
+          INTERACTIVE SHOWREEL
         </motion.p>
       </motion.div>
 

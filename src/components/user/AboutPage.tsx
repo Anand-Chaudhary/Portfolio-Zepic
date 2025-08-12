@@ -48,17 +48,20 @@ export function AboutPage() {
   const testimonials = [
     {
       quote: "Outstanding work! The final video exceeded our expectations and really captured our brand vision.",
-      author: "avantika rathore",  
+      author: "avantika rathore",
+      company: "",
       rating: 5
     },
     {
       quote: "Professional, timely, and creative. NextGen delivered exactly what we needed for our campaign.",
       author: "ashmit chaukhani", 
+      company: "",
       rating: 5
     },
     {
       quote: "The color grading work was phenomenal. Really transformed our raw footage into something cinematic.",
       author: "ritesh jadav",
+      company: "",
       rating: 5
     }
   ];
@@ -252,7 +255,7 @@ export function AboutPage() {
                         </motion.span>
                       ))}
                     </div>
-                    <p className="text-liquid-gray-600 italic">"{testimonial.quote}"</p>
+                    <p className="text-liquid-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
                     <div className="border-t border-liquid-gray-200 pt-4">
                       <p className="text-liquid-gray-900 text-sm font-medium">{testimonial.author}</p>
                       <p className="text-liquid-red text-xs">{testimonial.company}</p>
@@ -275,7 +278,7 @@ export function AboutPage() {
         >
           <h2 className="text-3xl font-black text-liquid-gray-900 mb-4">READY TO START YOUR PROJECT?</h2>
           <p className="text-liquid-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your vision and bring your story to life with professional video editing services.
+            Let&apos;s discuss your vision and bring your story to life with professional video editing services.
           </p>
           <div className="flex justify-center gap-4">
             <motion.div
