@@ -48,20 +48,17 @@ export function AboutPage() {
   const testimonials = [
     {
       quote: "Outstanding work! The final video exceeded our expectations and really captured our brand vision.",
-      author: "avantika rathore",
-      company: "",
+      author: "avantika rathore",  
       rating: 5
     },
     {
       quote: "Professional, timely, and creative. NextGen delivered exactly what we needed for our campaign.",
       author: "ashmit chaukhani", 
-      company: "",
       rating: 5
     },
     {
       quote: "The color grading work was phenomenal. Really transformed our raw footage into something cinematic.",
       author: "ritesh jadav",
-      company: "",
       rating: 5
     }
   ];
@@ -77,9 +74,9 @@ export function AboutPage() {
   };
 
   return (
-    <section id="about" className="min-h-screen relative">
+    <section id="about" className="min-h-screen relative overflow-x-hidden">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 py-10 sm:py-20 relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ y: 50, opacity: 0 }}
@@ -134,7 +131,7 @@ export function AboutPage() {
                 whileInView={{ y: 0, opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 viewport={{ once: true, margin: "-50px" }}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover={{ y: -5, scale: 1.09 }}
               >
                 <Card className="liquid-card border border-liquid-gray-200 hover:border-liquid-red/30 transition-colors duration-300 h-full liquid-glow-card">
                   <CardContent className="p-6 space-y-4">
@@ -255,10 +252,9 @@ export function AboutPage() {
                         </motion.span>
                       ))}
                     </div>
-                    <p className="text-liquid-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
+                    <p className="text-liquid-gray-600 italic">"{testimonial.quote}"</p>
                     <div className="border-t border-liquid-gray-200 pt-4">
-                      <p className="text-liquid-gray-900 text-sm font-medium">{testimonial.author}</p>
-                      <p className="text-liquid-red text-xs">{testimonial.company}</p>
+                      <p className="text-liquid-gray-900 text-sm font-medium">{testimonial.author}</p>                  
                     </div>
                   </CardContent>
                 </Card>
@@ -278,7 +274,7 @@ export function AboutPage() {
         >
           <h2 className="text-3xl font-black text-liquid-gray-900 mb-4">READY TO START YOUR PROJECT?</h2>
           <p className="text-liquid-gray-600 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your vision and bring your story to life with professional video editing services.
+            Let's discuss your vision and bring your story to life with professional video editing services.
           </p>
           <div className="flex justify-center gap-4">
             <motion.div

@@ -6,8 +6,8 @@ const sampleVideos = [
     id: 1,
     title: "Sample 01",
     duration: "2:30",
-    src: "/maria.mp4",
-    poster: "/maria.mp4",
+    src: "/zepi.ic_14040522_184654810.mp4",
+    poster: "/zepi.ic_14040522_184654810.mp4",
     description: "This is something i have worked on"
   },
   {

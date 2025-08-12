@@ -42,7 +42,7 @@ export function ContactPage() {
       price: "₹700-₹4000",
       description: "Commercial quality with motion graphics",
       features: [
-        "Up to 15-20 minutes long",
+        "Up to 20 minutes long",
         "Advanced transitions & effects",
         "Motion graphics & titles",
         "Color grading included",
