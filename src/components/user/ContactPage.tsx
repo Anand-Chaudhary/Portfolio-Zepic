@@ -1,123 +1,9 @@
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Label } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { motion, AnimatePresence } from 'motion/react';
-import { CheckCircle, AlertCircle, Send, Calculator } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    projectType: '',
-    budget: '',
-    timeline: '',
-    message: ''
-  });
-
-  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
-  const [isFormValid, setIsFormValid] = useState(false);
-  const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-    
-    // Clear error when user starts typing
-    if (formErrors[field]) {
-      setFormErrors(prev => ({ ...prev, [field]: '' }));
-    }
-  };
-
-  // Real-time validation
-  useEffect(() => {
-    const errors: Record<string, string> = {};
-    
-    if (formData.name && formData.name.length < 2) {
-      errors.name = 'Name must be at least 2 characters';
-    }
-    
-    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Please enter a valid email';
-    }
-    
-    if (formData.message && formData.message.length < 10) {
-      errors.message = 'Please provide more details (at least 10 characters)';
-    }
-    
-    setFormErrors(errors);
-    setIsFormValid(
-      formData.name.length >= 2 && 
-      /\S+@\S+\.\S+/.test(formData.email) && 
-      !!formData.projectType && 
-      formData.message.length >= 10
-    );
-  }, [formData]);
-
-  // Calculate estimated price based on selections
-  useEffect(() => {
-    if (formData.projectType && formData.budget) {
-      const basePrice = {
-        'commercial': 800,
-        'social': 300,
-        'music': 600,
-        'corporate': 700,
-        'documentary': 1200,
-        'other': 500
-      }[formData.projectType] || 500;
-
-      const budgetMultiplier = {
-        '200-500': 0.8,
-        '500-1200': 1,
-        '1200-2500': 1.5,
-        '2500+': 2
-      }[formData.budget] || 1;
-
-      const timelineMultiplier = {
-        'rush': 1.5,
-        'week': 1.2,
-        '2weeks': 1,
-        'month': 0.9,
-        'flexible': 0.8
-      }[formData.timeline] || 1;
-
-      const estimated = Math.round(basePrice * budgetMultiplier * timelineMultiplier);
-      setEstimatedPrice(estimated);
-    } else {
-      setEstimatedPrice(null);
-    }
-  }, [formData.projectType, formData.budget, formData.timeline]);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isFormValid) return;
-
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
-    
-    // Reset form after success
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        projectType: '',
-        budget: '',
-        timeline: '',
-        message: ''
-      });
-      setSubmitSuccess(false);
-    }, 3000);
-  };
 
   const contactInfo = [
     {
@@ -200,7 +86,7 @@ export function ContactPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            LET'S WORK TOGETHER
+            LET&apos;S WORK TOGETHER
           </motion.h1>
           <motion.p 
             className="text-xl dark-text-secondary max-w-3xl mx-auto"
@@ -223,20 +109,6 @@ export function ContactPage() {
             viewport={{ once: true, margin: "-100px" }}
           >
 
-
-            <AnimatePresence>
-              {submitSuccess && (
-                <motion.div
-                  initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                  className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 flex items-center gap-3"
-                >
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-green-300">Message sent successfully! I'll get back to you within 24 hours.</span>
-                </motion.div>
-              )}
-            </AnimatePresence>
 
 
           </motion.div>
